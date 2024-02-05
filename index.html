@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Message</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fbaaca;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #FF4081;
+        }
+
+        button {
+            background-color: #ef2236;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Will You Be My Valentine?</h1>
+        <button onclick="answer('yes')">Yes</button>
+        <button onclick="answer('no')">No</button>
+    </div>
+
+    <script>
+        function answer(response) {
+            if (response === 'yes') {
+                alert('That\'s wonderful! Happy Valentine\'s Day!');
+            } else if (response === 'no') {
+                alert('Oh no! Maybe next time. Happy Valentine\'s Day!');
+            }
+        }
+    </script>
+</body>
+</html>
