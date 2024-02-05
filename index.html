@@ -51,28 +51,15 @@
     </div>
 
     <script>
-        function checkAnswer(response) {
+        function answer(response) {
             var responseElement = document.getElementById('response');
-
+            
             if (response === 'yes') {
-                responseElement.innerHTML = 'yayyyy! see you on valentine\'s day! :3 (and sooner obviously)';
+                responseElement.innerHTML = 'yayyyy see you on happy valentine\'s ay :3 (And Sooner Obviously)';
             } else if (response === 'no') {
-                responseElement.innerHTML = 'kys. try again, bitch.';
-                setTimeout(function() {
-                    // Ask the question again after a delay
-                    responseElement.innerHTML = '';
-                    askQuestion();
-                }, 2000); // 2000 milliseconds (2 seconds) delay
+                responseElement.innerHTML = 'kys. try again bitch';
             }
         }
-
-        function askQuestion() {
-            var responseElement = document.getElementById('response');
-            responseElement.innerHTML = 'Will You Be My Valentine?';
-        }
-
-        // Initial question
-        askQuestion();
     </script>
 </body>
 </html>
