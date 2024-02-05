@@ -35,6 +35,11 @@
             border: none;
             border-radius: 5px;
         }
+
+        #response {
+            margin-top: 20px;
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
@@ -42,14 +47,17 @@
         <h1>Will You Be My Valentine?</h1>
         <button onclick="answer('yes')">Yes</button>
         <button onclick="answer('no')">No</button>
+        <div id="response"></div>
     </div>
 
     <script>
         function answer(response) {
+            var responseElement = document.getElementById('response');
+            
             if (response === 'yes') {
-                alert('That\'s wonderful! Happy Valentine\'s Day!');
+                responseElement.innerHTML = 'That\'s wonderful! Happy Valentine\'s Day!';
             } else if (response === 'no') {
-                alert('Oh no! Maybe next time. Happy Valentine\'s Day!');
+                responseElement.innerHTML = 'Oh no! Maybe next time. Happy Valentine\'s Day!';
             }
         }
     </script>
