@@ -6,26 +6,45 @@
     <title>Valentine's Day Message</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Courier New', Courier, monospace, sans-serif;
             text-align: center;
             background-color: #fbaaca;
             margin: 0;
             padding: 0;
         }
 
-        #container {
+        .container {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
+            text-align: center; 
         }
 
         h1 {
             color: #FF4081;
         }
 
+        img {
+            width: 300px; 
+            border-radius: 50%; 
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin-bottom: 20px;
+        }
+
+
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            width: 200px; 
+        }
+
         button {
+            font-family: 'Courier New', Courier, monospace, sans-serif;
             background-color: #ef2236;
             color: white;
             font-size: 16px;
@@ -43,10 +62,11 @@
     </style>
 </head>
 <body>
-    <div id="container">
-        <h1>Will You Be My Valentine?</h1>
-        <button onclick="answer('yes')">Yes</button>
-        <button onclick="answer('no')">No</button>
+    <div class="container">
+        <h1>will you be my valentine?</h1>
+        <img src="https://media1.tenor.com/m/rv20dFusX-QAAAAC/love.gif" alt="penguins">
+        <button onclick="answer('yes')">yes</button>
+        <button onclick="answer('no')">no</button>
         <div id="response"></div>
     </div>
 
@@ -55,8 +75,9 @@
             var responseElement = document.getElementById('response');
             
             if (response === 'yes') {
-                responseElement.innerHTML = 'yayyyy see you on happy valentine\'s ay :3 (And Sooner Obviously)';
-            } else if (response === 'no') {
+                window.location.href = 'index2.html';
+            
+            }else if (response === 'no') {
                 responseElement.innerHTML = 'kys. try again bitch';
             }
         }
